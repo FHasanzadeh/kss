@@ -1,9 +1,9 @@
 # Knyle Style Sheets
 
-Inspired by [TomDoc](http://tomdoc.org), KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and styleguide format. It is **not** a preprocessor, CSS framework, naming convention, or specificity guideline.
+Inspired by [TomDoc](http://tomdoc.org), KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and style guide format. It is **not** a preprocessor, CSS framework, naming convention, or specificity guideline.
 
 * **[The Spec (What KSS is)](https://github.com/kneath/kss/blob/master/SPEC.md)**
-* **[Example living styleguide](https://github.com/kneath/kss/tree/master/example)**
+* **[Example living style guide](https://github.com/kneath/kss/tree/master/example)**
 
 ## KSS in a nutshell
 
@@ -98,14 +98,14 @@ styleguide.section('1.1').description
 
 The library is also fully TomDoc'd, completing the circle of life.
 
-## Generating styleguides
+## Generating style guides
 
-The documenting syntax and ruby library are intended to generate styleguides automatically. To do this, you'll need to leverage a small javascript library that generates class styles for pseudo-class styles (`:hover`, `:disabled`, etc).
+The documenting syntax and ruby library are intended to generate style guides automatically. To do this, you'll need to leverage a small javascript library that generates class styles for pseudo-class styles (`:hover`, `:disabled`, etc).
 
 * [kss.coffee](https://github.com/kneath/kss/blob/master/lib/kss.coffee)
 * [kss.js](https://github.com/kneath/kss/blob/master/example/public/javascripts/kss.js) (compiled js)
 
-For an example of how to generate a styleguide, check out the [`example`](https://github.com/kneath/kss/tree/master/example) sinatra application.
+For an example of how to generate a style guide, check out the [`example`](https://github.com/kneath/kss/tree/master/example) sinatra application.
 
 ## Development
 

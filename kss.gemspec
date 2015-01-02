@@ -4,7 +4,7 @@ Gem::Specification.new do |s|
   s.name              = "kss"
   s.version           = Kss::VERSION
   s.date              = Time.now.strftime('%Y-%m-%d')
-  s.summary           = "A library for parsing KSS documented stylesheets and generating styleguides"
+  s.summary           = "A library for parsing KSS documented stylesheets and generating style guides"
   s.homepage          = "http://github.com/kneath/kss"
   s.email             = "kneath@gmail.com"
   s.authors           = [ "Kyle Neath" ]
@@ -18,9 +18,9 @@ Gem::Specification.new do |s|
   s.description       = <<desc
   Inspired by TomDoc, KSS attempts to provide a methodology for writing
   maintainable, documented CSS within a team. Specifically, KSS is a CSS
-  structure, documentation specification, and styleguide format.
+  structure, documentation specification, and style guide format.
 
   This is a ruby library for parsing KSS documented CSS and generating
-  styleguides.
+  style guides.
 desc
 end

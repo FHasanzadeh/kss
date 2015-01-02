@@ -1,5 +1,5 @@
 module Kss
-  # Public: Represents a styleguide section. Each section describes one UI
+  # Public: Represents a style guide section. Each section describes one UI
   # element. A Section can be thought of as the collection of the description,
   # modifiers, and styleguide reference.
   class Section
@@ -28,7 +28,7 @@ module Kss
       @comment_sections ||= raw ? raw.split("\n\n") : []
     end
 
-    # Public: The styleguide section for which this comment block references.
+    # Public: The style guide section for which this comment block references.
     #
     # Returns the section reference String (ex: "2.1.8").
     def section
@@ -40,7 +40,7 @@ module Kss
       @section
     end
 
-    # Public: The description section of a styleguide comment block.
+    # Public: The description section of a style guide comment block.
     #
     # Returns the description String.
     def description
@@ -50,7 +50,7 @@ module Kss
       end.join("\n\n")
     end
 
-    # Public: The modifiers section of a styleguide comment block.
+    # Public: The modifiers section of a style guide comment block.
     #
     # Returns an Array of Modifiers.
     def modifiers

@@ -47,7 +47,7 @@ get '/inline' do
 end
 
 helpers do
-  # Generates a styleguide block. A little bit evil with @_out_buf, but
+  # Generates a styleguide_block. A little bit evil with @_out_buf, but
   # if you're using something like Rails, you can write a much cleaner helper
   # very easily.
   def styleguide_block(section, &block)

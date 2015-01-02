@@ -51,7 +51,7 @@ module Kss
       possible_reference =~ STYLEGUIDE_PATTERN
     end
 
-    # Public: Finds the Section for a given styleguide reference.
+    # Public: Finds the Section for a given Styleguide reference.
     #
     # Returns a Section for a reference, or a blank Section if none found.
     def section(reference)

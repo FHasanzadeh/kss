@@ -20,7 +20,7 @@ module Kss
     end
 
     # Public: The modifier name as a CSS class. For pseudo-classes, a
-    # generated class name is returned. Useful for generating styleguides.
+    # generated class name is returned. Useful for generating style guides.
     #
     # Examples
     #
