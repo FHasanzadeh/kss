@@ -11,6 +11,10 @@ However, there are several software projects that provide preprocessors that rea
 
 This specification does not discuss those implementations.
 
+**kss-node only:** (Actually, this copy of the spec *does* discuss one of those implementations.) For example, here's how kss-node is related to kss:
+
+![KSS is a spec for docs. kss-node is a preprocessor and JavaScript API.](https://raw.githubusercontent.com/kss-node/kss/spec/kss-vs-kss-node.png)
+
 ## Purpose
 
 KSS is a set of guidelines to help you produce an HTML style guide tied to CSS documentation that is nice to read in plain text, yet structured enough to be automatically extracted and processed by a machine. It is designed with CSS preprocessors (such as Sass or LESS) in mind, and flexible enough to accommodate a multitude of CSS frameworks (such as Bootstrap or Foundation).
