@@ -1,6 +1,6 @@
 # Knyle Style Sheets
 
-Inspired by [TomDoc](http://tomdoc.org), KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and style guide format. It is **not** a preprocessor, CSS framework, naming convention, or specificity guideline.
+KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and style guide format. It is **not** a preprocessor, CSS framework, naming convention, or specificity guideline.
 
 ## Purpose
 
@@ -10,7 +10,7 @@ KSS focuses on *how people work with CSS* — it does not define code structures
 
 ## Style Documentation
 
-Unlike TomDoc, not every CSS rule should be documented. You should document a rule declaration when the rule can accurately describe a visual UI element in the style guide. Each element should have one documentation block describing that particular UI element's various states.
+Not every CSS rule should be documented. You should document a rule declaration when the rule can accurately describe a visual UI element in the style guide. Each element should have one documentation block describing that particular UI element's various states.
 
 KSS documentation is hierarchical in nature — any documentation block at any point within the style guide hierarchy applies to the documentation blocks beneath that level. This means that documentation for 2.1 applies to documentation for 2.1.3.
 
@@ -203,3 +203,7 @@ This style guide is automatically generated from KSS documentation using the rub
 The actual templates generating the style guide just reference the Styleguide section and example HTML. The modified states are generated automatically. Refer to the README for more information on how to generate style guides using the KSS ruby library.
 
 Overall, keep in mind that style guides should adapt to the application they are referencing and be easy to maintain and as automatic as possible.
+
+### Acknowledgements
+
+KSS was inspired by [TomDoc](http://tomdoc.org).
