@@ -2,6 +2,13 @@
 
 KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and style guide format. It is **not** a preprocessor, CSS framework, naming convention, or specificity guideline.
 
+However, there are several software projects that provide preprocessors that read and parse KSS-compliant documentation to produce full-blown style guides in HTML. Most of those implementations provide:
+
+1. a tool to generate a style guide by parsing CSS source files to find KSS docs, and
+2. a language-dependent API that represents the style guide as a data structure.
+
+This specification does not discuss those implementations.
+
 ## Purpose
 
 KSS is a set of guidelines to help you produce an HTML style guide tied to CSS documentation that is nice to read in plain text, yet structured enough to be automatically extracted and processed by a machine. It is designed with CSS preprocessors (such as SCSS or LESS) in mind, and flexible enough to accommodate a multitude of CSS frameworks (such as YUI, Blueprint or 960).
