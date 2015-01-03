@@ -83,10 +83,10 @@ Each KSS documentation block consists of two required parts and a few optional p
 
 1. a heading *(required)*
 2. a description of what the style does or looks like *(optional)*
-3. **kss-node only:** the name of file containing the HTML markup the CSS applies to, or a copy of the markup inline *(optional)*
+3. **kss-node only:** (kss-node 2.x only) the name of file containing the HTML markup the CSS applies to, or (kss-node 2.x or 1.x) a copy of the markup inline *(optional)*
 4. a list of modifier classes or pseudo-classes and how they modify the style *(optional)*
 5. a reference to the style's position in the style guide *(required)*
-6. **kss-node only:** a numerical weight that can be used to re-position a style outside of the normal alphabetical order *(optional)*
+6. **kss-node 2.x only:** a numerical weight that can be used to re-position a style outside of the normal alphabetical order *(optional)*
 
 ### The heading and description sections
 
@@ -153,7 +153,7 @@ You can include sample markup in your style guide entries. This is not only help
 
 If you include `{{modifier_class}}` in the markup, the generated style guide will be able to use the correct CSS class when it displays the sample for each of the modifiers listed in the modifier section.
 
-Instead of using inline HTML markup, you could point at a separate file that contains your HTML. kss-node supports either a plain *.html file or a Handlebars *.hbs file. The kss-node generator will search for the markup file in any of the `--source` folders.
+(kss-node 2.x only) Instead of using inline HTML markup, you could point at a separate file that contains your HTML. kss-node supports either a plain *.html file or a Handlebars *.hbs file. The kss-node generator will search for the markup file in any of the `--source` folders.
 
 ```scss
 // Button
@@ -193,11 +193,11 @@ If there is no example, then you must note that there is no reference.
 // No styleguide reference.
 ```
 
-**kss-node only:** If word keys or word phrases are used, kss-node will automatically generate a hierarchal number for each section since "section 4.1.3" is easier to communicate to others than "section forms - widgets - special checkboxes".
+**kss-node 2.x only:** If word keys or word phrases are used, kss-node will automatically generate a hierarchal number for each section since "section 4.1.3" is easier to communicate to others than "section forms - widgets - special checkboxes".
 
 ### The weight section
 
-**kss-node only:**
+**kss-node 2.x only:**
 
 If you are using word keys or word phrases as your style guide references, kss-node will sort all sections using alphabetical order. This can be problematic if, for example, you want the documentation about `sass.variables` to come before the docs about `sass.mixins`.
 
@@ -298,7 +298,7 @@ In order to fully take advantage of KSS, you should create a living style guide.
 
 The style guide should be organized by numbered sections. These sections can go as deep as you like. Every element should have a numbered section to refer to.
 
-**kss-node only:** If word keys or word phrases are used instead of numbered sections, kss-node will automatically generate a hierarchal number for each section based on the alphabetical and weight-based sorting of the sections.
+**kss-node 2.x only:** If word keys or word phrases are used instead of numbered sections, kss-node will automatically generate a hierarchal number for each section based on the alphabetical and weight-based sorting of the sections.
 
 For example:
 
@@ -328,7 +328,7 @@ This style guide is automatically generated from KSS documentation using the rub
 
 The actual templates generating the style guide just reference the Styleguide section and example HTML. The modified states are generated automatically. Refer to the README for more information on how to generate style guides using the KSS ruby library.
 
-**kss-node only:** Refer to the [kss-node README](https://github.com/kss-node/kss-node#kss-node-) for more information on how to generate style guides using the kss-node generator.
+**kss-node only:** Refer to the [kss-node 1.x README](https://github.com/kss-node/kss-node#kss-node-) or the [kss-node 2.x README](https://github.com/kss-node/kss-node/tree/master#kss-node-) for more information on how to generate style guides using the kss-node generator.
 
 Overall, keep in mind that style guides should adapt to the application they are referencing and be easy to maintain and as automatic as possible.
 
