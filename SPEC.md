@@ -27,7 +27,7 @@ A button suitable for giving stars to someone.
 .stars-given:hover - Subtle hover highlight on top of stars-given styling.
 .disabled          - Dims the button to indicate it cannot be used.
 
-Styleguide 2.1.3.
+Styleguide 2.1.3
 */
 a.button.star{
   ...
@@ -50,7 +50,7 @@ When using a preprocessor that supports the functionality, use `//` to prefix yo
 // .stars-given:hover - Subtle hover highlight on top of stars-given styling.
 // .disabled          - Dims the button to indicate it cannot be used.
 //
-// Styleguide 2.1.3.
+// Styleguide 2.1.3
 a.button.star{
   ...
   &.star-given{
@@ -106,7 +106,7 @@ If the UI element you are documenting has multiple states or styles depending on
 If the UI element you are documenting has an example in the styleguide, you should reference it using the "Styleguide [ref]" syntax.
 
 ```scss
-// Styleguide 2.1.3.
+// Styleguide 2.1.3
 ```
 
 References can be integer sections separated by periods. Each period denotes a hierarchy of the styleguide. Styleguide references can point to entire sections, a portion of the section, or a specific example.
@@ -114,7 +114,7 @@ References can be integer sections separated by periods. Each period denotes a h
 References may also be period seperated word keys.  Leading words denote hierarchy.
 
 ```scss
-// Styleguide Forms.Checkboxes.
+// Styleguide Forms.Checkboxes
 ```
 
 Finally, references may be more readable word phrases.

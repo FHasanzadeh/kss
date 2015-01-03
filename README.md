@@ -18,7 +18,7 @@ A button suitable for giving stars to someone.
 .stars-given:hover - Subtle hover highlight on top of stars-given styling.
 .disabled          - Dims the button to indicate it cannot be used.
 
-Styleguide 2.1.3.
+Styleguide 2.1.3
 */
 a.button.star{
   ...
@@ -33,9 +33,9 @@ a.button.star.disabled{
 
 KSS can also support words as Styleguide section names
 ```scss
-// Styleguide Forms.Checkboxes.
+// Styleguide Forms.Checkboxes
 // - or -
-// Styleguide Forms - Special Checkboxes.
+// Styleguide Forms - Special Checkboxes
 ```
 
 ## Ruby Library [![Build Status](https://travis-ci.org/kneath/kss.png)](https://travis-ci.org/kneath/kss) [![Code Climate](https://codeclimate.com/github/kneath/kss.png)](https://codeclimate.com/github/kneath/kss)

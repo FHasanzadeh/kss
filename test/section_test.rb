@@ -13,7 +13,7 @@ Your standard form button.
 .primary  - Indicates button is the primary action.
 .smaller  - A smaller button
 
-Styleguide 2.1.1.
+Styleguide 2.1.1
 comment
 
     @section = Kss::Section.new(@comment_text, 'example.css')
