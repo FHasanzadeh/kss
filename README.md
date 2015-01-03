@@ -11,7 +11,9 @@ The methodology and ideas behind Knyle Style Sheets are contained in [SPEC.md](h
 
 ```css
 /*
-Your standard button.
+Button
+
+Your standard button suitable for clicking.
 
 :hover    - Highlights when hovering.
 :disabled - Dims the button when disabled.
