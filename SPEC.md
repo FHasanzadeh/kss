@@ -12,11 +12,11 @@ KSS focuses on *how people work with CSS* — it does not define code structures
 
 Unlike TomDoc, not every CSS rule should be documented. You should document a rule declaration when the rule can accurately describe a visual UI element in the style guide. Each element should have one documentation block describing that particular UI element's various states.
 
-KSS documentation is hierarchical in nature — any documentation blocks at any point within the style guide hierarchy apply to the documentation blocks beneath that level. This means that documentation for 2.1 applies to documentation for 2.1.3.
+KSS documentation is hierarchical in nature — any documentation block at any point within the style guide hierarchy applies to the documentation blocks beneath that level. This means that documentation for 2.1 applies to documentation for 2.1.3.
 
 ### Format
 
-The basic format for KSS documentation can be best explained in an example:
+The basic format for KSS documentation can be explained best in an example:
 
 ```css
 /*
