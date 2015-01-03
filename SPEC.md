@@ -83,8 +83,10 @@ Each KSS documentation block consists of two required parts and a few optional p
 
 1. a heading *(required)*
 2. a description of what the style does or looks like *(optional)*
-3. a list of modifier classes or pseudo-classes and how they modify the style *(optional)*
-4. a reference to the style's position in the style guide *(required)*
+3. **kss-node only:** the name of file containing the HTML markup the CSS applies to, or a copy of the markup inline *(optional)*
+4. a list of modifier classes or pseudo-classes and how they modify the style *(optional)*
+5. a reference to the style's position in the style guide *(required)*
+6. **kss-node only:** a numerical weight that can be used to re-position a style outside of the normal alphabetical order *(optional)*
 
 ### The heading and description sections
 
@@ -130,6 +132,39 @@ If the UI element you are documenting has multiple states or styles depending on
 // .disabled          - Dims the button to indicate it cannot be used.
 ```
 
+### The markup section
+
+**kss-node only:**
+
+You can include sample markup in your style guide entries. This is not only helpful for newcomers to a project, but is also used by the kss-node generator to include samples in your style guide. Just start a paragraph in your section with `Markup:` like so:
+
+```scss
+// Button
+//
+// Buttons can and should be clicked.
+//
+// Markup:
+// <button class="button {{modifier_class}}">
+//
+// :hover - Highlight the button when hovered.
+//
+// Styleguide 1.1
+```
+
+If you include `{{modifier_class}}` in the markup, the generated style guide will be able to use the correct CSS class when it displays the sample for each of the modifiers listed in the modifier section.
+
+Instead of using inline HTML markup, you could point at a separate file that contains your HTML. kss-node supports either a plain *.html file or a Handlebars *.hbs file. The kss-node generator will search for the markup file in any of the `--source` folders.
+
+```scss
+// Button
+//
+// Markup: button.hbs
+//
+// Styleguide 1.1
+```
+
+Lastly, if your application or component library is built with Node.js, instead of using the `markup` section, you could use the JavaScript API provided to parse the KSS documentation and build a style guide using the HTML templating library of your choice.
+
 ### The styleguide section
 
 If the UI element you are documenting has an example in the style guide, you should reference it using the "Styleguide [ref]" syntax.
@@ -157,6 +192,58 @@ If there is no example, then you must note that there is no reference.
 ```scss
 // No styleguide reference.
 ```
+
+**kss-node only:** If word keys or word phrases are used, kss-node will automatically generate a hierarchal number for each section since "section 4.1.3" is easier to communicate to others than "section forms - widgets - special checkboxes".
+
+### The weight section
+
+**kss-node only:**
+
+If you are using word keys or word phrases as your style guide references, kss-node will sort all sections using alphabetical order. This can be problematic if, for example, you want the documentation about `sass.variables` to come before the docs about `sass.mixins`.
+
+With kss-node, you can specify a numeric weight for style guide section that overrides the default alphabetical ordering of sibling sections. If no weight is specified for a section, the default weight of 0 is used. Lighter weights (like -10) will "rise above" sibling sections with the default weight of 0 and heavier weights (like 10) will "sink below".
+
+For example:
+
+```scss
+// Sass mixins
+//
+// Style guide: sass.mixins
+
+// Sass colors
+//
+// Style guide: sass.colors
+
+// Sass variables
+//
+// Weight: -10
+//
+// Style guide: sass.variables
+
+// Sass
+//
+// Weight: -1
+//
+// Style guide: sass
+
+// Components
+//
+// Style guide: components
+```
+
+The above KSS docs will produce a style guide hierarchy like this:
+
+```
+1: Sass
+  1.1: Sass variables
+  1.2: Sass colors
+  1.3: Sass mixins
+2: Components
+```
+
+First, you'll notice that kss-node has auto-generated hierarchal numbering for you. Also note that the weights only affect the ordering of siblings in the hierarchy; the weight of `sass.variables` only affects its ordering relative to `sass.colors` and `sass.mixins`.
+
+Finally, any sibling sections with the same weight will be put into alphabetical order next to each other. In our example, if a new `sass.modules` section is added with `Weight: -10`, it would be alphabetically sorted before the `sass.variables` section with `Weight: -10`.
 
 ## Preprocessor Helper Documentation
 
@@ -209,7 +296,11 @@ In order to fully take advantage of KSS, you should create a living style guide.
 
 ### Organization
 
-The style guide should be organized by numbered sections. These sections can go as deep as you like. Every element should have a numbered section to refer to. For example:
+The style guide should be organized by numbered sections. These sections can go as deep as you like. Every element should have a numbered section to refer to.
+
+**kss-node only:** If word keys or word phrases are used instead of numbered sections, kss-node will automatically generate a hierarchal number for each section based on the alphabetical and weight-based sorting of the sections.
+
+For example:
 
     1. Buttons
       1.1 Form Buttons
