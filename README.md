@@ -18,7 +18,7 @@ A button suitable for giving stars to someone.
 .stars-given:hover - Subtle hover highlight on top of stars-given styling.
 .disabled          - Dims the button to indicate it cannot be used.
 
-Styleguide 2.1.3.
+Styleguide 2.1.3
 */
 a.button.star{
   ...
