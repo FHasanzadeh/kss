@@ -60,7 +60,7 @@ When using a preprocessor that supports the functionality, use `//` to prefix yo
 // Styleguide 2.1.3
 a.button.star {
   ...
-  &.star-given {
+  &.stars-given {
     ...
   }
   &.disabled {
