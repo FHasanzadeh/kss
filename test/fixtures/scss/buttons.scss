@@ -6,22 +6,22 @@
 // .smaller  - A little bit smaller now.
 //
 // Styleguide 2.1.1
-button{
+button {
   padding:5px 15px;
 
-  &.primary, &.primary:hover{
+  &.primary, &.primary:hover {
     color:#fff;
   }
 
-  &.smaller{
+  &.smaller {
     font-size:11px;
   }
 
-  &:hover{
+  &:hover {
     color:#337797;
   }
 
-  &:disabled{
+  &:disabled {
     opacity:0.5;
   }
 }
@@ -32,16 +32,16 @@ button{
 // .disabled   - Dims the button to indicate it cannot be used.
 //
 // Styleguide 2.2.1
-a.button.star{
+a.button.star {
   display:inline-block;
 
-  .star{ font-size:10px; }
+  .star { font-size:10px; }
 
-  &.star-given{
+  &.star-given {
     color:#ae7e00;
   }
 
-  &.disabled{
+  &.disabled {
     opacity:0.5;
   }
 }

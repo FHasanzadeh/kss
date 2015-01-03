@@ -5,8 +5,8 @@
 #
 # Example:
 #
-#   a:hover{ color:blue; }
-#   => a.pseudo-class-hover{ color:blue; }
+#   a:hover { color:blue; }
+#   => a.pseudo-class-hover { color:blue; }
 class KssStateGenerator
   pseudo_selectors = [
     'hover',
@@ -39,7 +39,7 @@ class KssStateGenerator
 
   # Takes a given style and attaches it to the current page.
   #
-  # rule - A CSS rule String (ex: ".test{ display:none; }").
+  # rule - A CSS rule String (ex: ".test { display:none; }").
   #
   # Returns nothing.
   insertRule: (rule) ->

@@ -8,12 +8,12 @@
 h1, h2, h3, h4, h5, h6, p, pre, blockquote, label, ul, ol, dl, fieldset, address { margin:1em 0; }
 li, dd { margin-left:5%; }
 fieldset { padding: .5em; }
-select option{ padding:0 5px; }
+select option { padding:0 5px; }
 
-.access{ display:none; } /* For accessibility related elements */
-.clear{ clear:both; height:0px; font-size:0px; line-height:0px; overflow:hidden; }
-a{ outline:none; }
-a img{ border:none; }
+.access { display:none; } /* For accessibility related elements */
+.clear { clear:both; height:0px; font-size:0px; line-height:0px; overflow:hidden; }
+a { outline:none; }
+a img { border:none; }
 
 .clearfix:after {
     content: ".";
@@ -28,12 +28,12 @@ a img{ border:none; }
 
 /* @end */
 
-body{
+body {
   font-family:Helvetica, Arial, sans-serif;
   font-size:14px;
 }
 
-header{
+header {
   padding:10px;
 
   font-size:16px;
@@ -43,7 +43,7 @@ header{
   border-bottom:1px solid #ddd;
 }
 
-#wrapper{
+#wrapper {
   width:600px;
   padding-left:200px;
 }
@@ -53,14 +53,14 @@ nav[role=main]{
   margin-left:-200px;
   width:160px;
 }
-nav ul{
+nav ul {
   margin-left:10px;
 }
-nav li{
+nav li {
   list-style-type:none;
   margin:10px 0;
 }
-nav li a{
+nav li a {
   text-decoration:none;
   color:#666;
 }

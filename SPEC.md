@@ -29,13 +29,13 @@ A button suitable for giving stars to someone.
 
 Styleguide 2.1.3
 */
-a.button.star{
+.button.star {
   ...
 }
-a.button.star.star-given{
+a.button.star.star-given {
   ...
 }
-a.button.star.disabled{
+a.button.star.disabled {
   ...
 }
 ```
@@ -51,12 +51,12 @@ When using a preprocessor that supports the functionality, use `//` to prefix yo
 // .disabled          - Dims the button to indicate it cannot be used.
 //
 // Styleguide 2.1.3
-a.button.star{
+a.button.star {
   ...
-  &.star-given{
+  &.star-given {
     ...
   }
-  &.disabled{
+  &.disabled {
     ...
   }
 }
@@ -140,7 +140,7 @@ If you use a CSS preprocessor like Sass or LESS, you should document all helper 
 // $end   - The color hex at the bottom.
 //
 // Compatible in IE6+, Firefox 2+, Safari 4+.
-@mixin gradient($start, $end){
+@mixin gradient($start, $end) {
   ...
 }
 ```
