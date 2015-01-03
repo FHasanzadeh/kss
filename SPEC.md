@@ -1,3 +1,5 @@
+**NOTE:** This is a copy of the official KSS spec, which is available at [github.com/kneath/kss](https://github.com/kneath/kss/blob/master/SPEC.md). This copy includes modifications of the spec which only apply to the kss-node implementation available at [github.com/kss-node/kss-node](https://github.com/kss-node/kss-node). The kss-node-specific differences will be clearly marked with the text: **kss-node only:**
+
 # Knyle Style Sheets
 
 KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and style guide format. It is **not** a preprocessor, CSS framework, naming convention, or specificity guideline.
