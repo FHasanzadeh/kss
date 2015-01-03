@@ -11,6 +11,8 @@ The methodology and ideas behind Knyle Style Sheets are contained in [SPEC.md](h
 
 ```css
 /*
+Star button
+
 A button suitable for giving stars to someone.
 
 :hover             - Subtle hover highlight.

@@ -27,6 +27,8 @@ The basic format for KSS documentation can be explained best in an example:
 
 ```css
 /*
+Star button
+
 A button suitable for giving stars to someone.
 
 :hover             - Subtle hover highlight.
@@ -50,6 +52,8 @@ Styleguide 2.1.3
 When using a preprocessor that supports the functionality, use `//` to prefix your comment sections (Sass example):
 
 ```scss
+// Star button
+//
 // A button suitable for giving stars to someone.
 //
 // :hover             - Subtle hover highlight.
@@ -69,11 +73,23 @@ When using a preprocessor that supports the functionality, use `//` to prefix yo
 }
 ```
 
-Each KSS documentation block consists of three parts: a description of what the element does or looks like, a list of modifier classes or pseudo-classes and how they modify the element, and a reference to the element's position in the style guide.
+Each KSS documentation block consists of two required parts and a few optional parts:
 
-### The description section
+1. a heading *(required)*
+2. a description of what the style does or looks like *(optional)*
+3. a list of modifier classes or pseudo-classes and how they modify the style *(optional)*
+4. a reference to the style's position in the style guide *(required)*
 
-The description should be plain sentences of what the CSS rule or hierarchy does and looks like. A good description gives guidance toward the application of elements the CSS rules style.
+### The heading and description sections
+
+The description should be plain sentences of what the CSS rule or hierarchy does or looks like. A good description gives guidance toward the application of elements the CSS rules style. The first paragraph in the description will be used as the heading for that style guide section.
+
+```scss
+// Activity feed
+//
+// A feed of activity items. Within each section, there should be many
+// articles which are the feed items.
+```
 
 CSS rules that depend on specific HTML structures should describe those structures using `<element#id.class:pseudo>` notation. For example:
 
