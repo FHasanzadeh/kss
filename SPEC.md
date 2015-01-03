@@ -328,7 +328,7 @@ This style guide is automatically generated from KSS documentation using the rub
 
 The actual templates generating the style guide just reference the Styleguide section and example HTML. The modified states are generated automatically. Refer to the README for more information on how to generate style guides using the KSS ruby library.
 
-**kss-node only:** Refer to the [kss-node 1.x README](https://github.com/kss-node/kss-node#kss-node-) or the [kss-node 2.x README](https://github.com/kss-node/kss-node/tree/master#kss-node-) for more information on how to generate style guides using the kss-node generator.
+**kss-node only:** Refer to the [kss-node 1.x README](https://github.com/kss-node/kss-node#readme) or the [kss-node 2.x README](https://github.com/kss-node/kss-node/tree/master#readme) for more information on how to generate style guides using the kss-node generator.
 
 Overall, keep in mind that style guides should adapt to the application they are referencing and be easy to maintain and as automatic as possible.
 
