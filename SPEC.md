@@ -36,13 +36,13 @@ A button suitable for giving stars to someone.
 
 Styleguide 2.1.3
 */
-.button.star {
+.star-button {
   ...
 }
-a.button.star.stars-given {
+.star-button.stars-given {
   ...
 }
-a.button.star.disabled {
+.star-button.disabled {
   ...
 }
 ```
@@ -58,7 +58,7 @@ When using a preprocessor that supports the functionality, use `//` to prefix yo
 // .disabled          - Dims the button to indicate it cannot be used.
 //
 // Styleguide 2.1.3
-a.button.star {
+.star-button {
   ...
   &.stars-given {
     ...

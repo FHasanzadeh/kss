@@ -20,13 +20,13 @@ A button suitable for giving stars to someone.
 
 Styleguide 2.1.3
 */
-a.button.star {
+.star-button {
   ...
 }
-a.button.star.stars-given {
+.star-button.stars-given {
   ...
 }
-a.button.star.disabled {
+.star-button.disabled {
   ...
 }
 ```
