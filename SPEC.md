@@ -138,15 +138,19 @@ If there is no example, then you must note that there is no reference.
 
 ## Preprocessor Helper Documentation
 
-If you use a CSS preprocessor like Sass or LESS, you should document all helper functions (sometimes called mixins).
+If you use a CSS preprocessor like Sass or LESS, you should document all helper code (like functions or mixins).
 
 ```scss
+// gradient($start, $end)
+//
 // Creates a linear gradient background, from top to bottom.
 //
 // $start - The color hex at the top.
 // $end   - The color hex at the bottom.
 //
 // Compatible in IE6+, Firefox 2+, Safari 4+.
+//
+// Styleguide sass.mixins.gradient
 @mixin gradient($start, $end) {
   ...
 }
