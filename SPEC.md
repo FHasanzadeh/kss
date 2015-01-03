@@ -72,7 +72,7 @@ CSS rules that depend on specific HTML structures should describe those structur
 
 ```scss
 // A feed of activity items. Within each <section.feed>, there should be many
-// <article>s which are the  feed items.
+// <article>s which are the feed items.
 ```
 
 To describe the status of a set of rules, you should prefix the description with **Experimental** or **Deprecated**.
@@ -111,7 +111,7 @@ If the UI element you are documenting has an example in the style guide, you sho
 
 References can be integer sections separated by periods. Each period denotes a hierarchy of the style guide. Style guide references can point to entire sections, a portion of the section, or a specific example.
 
-References may also be period seperated word keys.  Leading words denote hierarchy.
+References may also be period seperated word keys. Leading words denote hierarchy.
 
 ```scss
 // Styleguide Forms.Checkboxes.
@@ -145,7 +145,7 @@ If you use a CSS preprocessor like SCSS or LESS, you should document all helper 
 }
 ```
 
-Each documentation block should have a description section, parameters section, and compatibility section.  The description section follows the same guidelines as style documentation.
+Each documentation block should have a description section, parameters section, and compatibility section. The description section follows the same guidelines as style documentation.
 
 ### The parameters section
 
@@ -192,7 +192,7 @@ The style guide should be organized by numbered sections. These sections can go 
       4.1 Number tables
       4.2 Diagram tables
 
-The goal here is to create an organizational structure that is flexible, but  rigid enough to be machine processed and referenced inside of documentation.
+The goal here is to create an organizational structure that is flexible, but rigid enough to be machine processed and referenced inside of documentation.
 
 ### Example
 
