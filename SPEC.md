@@ -4,7 +4,7 @@ Inspired by [TomDoc](http://tomdoc.org), KSS attempts to provide a methodology f
 
 ## Purpose
 
-KSS is a set of guidelines to help you produce an HTML styleguide tied to CSS documentation that is nice to read in plain text, yet structured enough to be automatically extracted and processed by a machine. It is designed with CSS preprocessors (such as SCSS or LESS) in mind, and flexible enough to accommodate a multitude of CSS frameworks (such as YUI, Blueprint or 960).
+KSS is a set of guidelines to help you produce an HTML styleguide tied to CSS documentation that is nice to read in plain text, yet structured enough to be automatically extracted and processed by a machine. It is designed with CSS preprocessors (such as Sass or LESS) in mind, and flexible enough to accommodate a multitude of CSS frameworks (such as Bootstrap or Foundation).
 
 KSS focuses on *how people work with CSS* — it does not define code structures, naming conventions, or methods for abstraction. It is important to understand that the styleguide format and documentation format are intrinsically tied to one another.
 
@@ -12,19 +12,19 @@ KSS focuses on *how people work with CSS* — it does not define code structures
 
 Unlike TomDoc, not every CSS rule should be documented. You should document a rule declaration when the rule can accurately describe a visual UI element in the styleguide. Each element should have one documentation block describing that particular UI element's various states.
 
-KSS documentation is hierarchical in nature — any documentation blocks at any point within the styleguide hierarchy apply to the documentation blocks beneath that level. This means that documentation for 2.1 applies to documentation for 2.1.3.
+KSS documentation is hierarchical in nature — any documentation block at any point within the styleguide hierarchy applies to the documentation blocks beneath that level. This means that documentation for 2.1 applies to documentation for 2.1.3.
 
 ### Format
 
-The basic format for KSS documentation can be best explained in an example:
+The basic format for KSS documentation can be explained best in an example:
 
 ```css
 /*
 A button suitable for giving stars to someone.
 
 :hover             - Subtle hover highlight.
-.stars-given       - A highlight indicating you've already given a star.
-.stars-given:hover - Subtle hover highlight on top of stars-given styling.
+.star-given        - A highlight indicating you've already given a star.
+.star-given:hover  - Subtle hover highlight on top of star-given styling.
 .disabled          - Dims the button to indicate it cannot be used.
 
 Styleguide 2.1.3
@@ -32,7 +32,7 @@ Styleguide 2.1.3
 a.button.star{
   ...
 }
-a.button.star.stars-given{
+a.button.star.star-given{
   ...
 }
 a.button.star.disabled{
@@ -40,14 +40,14 @@ a.button.star.disabled{
 }
 ```
 
-When using a preprocessor that supports the functionality, use `//` to prefix your comment sections (SCSS example):
+When using a preprocessor that supports the functionality, use `//` to prefix your comment sections (Sass example):
 
 ```scss
 // A button suitable for giving stars to someone.
 //
 // :hover             - Subtle hover highlight.
-// .stars-given       - A highlight indicating you've already given a star.
-// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
+// .star-given        - A highlight indicating you've already given a star.
+// .star-given:hover  - Subtle hover highlight on top of star-given styling.
 // .disabled          - Dims the button to indicate it cannot be used.
 //
 // Styleguide 2.1.3
@@ -66,13 +66,13 @@ Each KSS documentation block consists of three parts: a description of what the 
 
 ### The description section
 
-The description should be plain sentences of what the CSS rule or hierarchy does and looks like. A good description gives guidance toward the application of elements the CSS rules style.
+The description should be plain sentences of what the CSS rule or hierarchy does or looks like. A good description gives guidance toward the application of elements the CSS rules style.
 
 CSS rules that depend on specific HTML structures should describe those structures using `<element#id.class:pseudo>` notation. For example:
 
 ```scss
 // A feed of activity items. Within each <section.feed>, there should be many
-// <article>s which are the  feed items.
+// <article>s which are the feed items.
 ```
 
 To describe the status of a set of rules, you should prefix the description with **Experimental** or **Deprecated**.
@@ -96,8 +96,8 @@ If the UI element you are documenting has multiple states or styles depending on
 
 ```scss
 // :hover             - Subtle hover highlight.
-// .stars-given       - A highlight indicating you've already given a star.
-// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
+// .star-given        - A highlight indicating you've already given a star.
+// .star-given:hover  - Subtle hover highlight on top of star-given styling.
 // .disabled          - Dims the button to indicate it cannot be used.
 ```
 
@@ -111,7 +111,7 @@ If the UI element you are documenting has an example in the styleguide, you shou
 
 References can be integer sections separated by periods. Each period denotes a hierarchy of the styleguide. Styleguide references can point to entire sections, a portion of the section, or a specific example.
 
-References may also be period seperated word keys.  Leading words denote hierarchy.
+References may also be period seperated word keys. Leading words denote hierarchy.
 
 ```scss
 // Styleguide Forms.Checkboxes
@@ -131,7 +131,7 @@ If there is no example, then you must note that there is no reference.
 
 ## Preprocessor Helper Documentation
 
-If you use a CSS preprocessor like SCSS or LESS, you should document all helper functions (sometimes called mixins).
+If you use a CSS preprocessor like Sass or LESS, you should document all helper functions (sometimes called mixins).
 
 ```scss
 // Creates a linear gradient background, from top to bottom.
@@ -145,7 +145,7 @@ If you use a CSS preprocessor like SCSS or LESS, you should document all helper 
 }
 ```
 
-Each documentation block should have a description section, parameters section, and compatibility section.  The description section follows the same guidelines as style documentation.
+Each documentation block should have a description section, parameters section, and compatibility section. The description section follows the same guidelines as style documentation.
 
 ### The parameters section
 
@@ -192,7 +192,7 @@ The styleguide should be organized by numbered sections. These sections can go a
       4.1 Number tables
       4.2 Diagram tables
 
-The goal here is to create an organizational structure that is flexible, but  rigid enough to be machine processed and referenced inside of documentation.
+The goal here is to create an organizational structure that is flexible, but rigid enough to be machine processed and referenced inside of documentation.
 
 ### Example
 
