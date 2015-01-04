@@ -8,15 +8,15 @@ Your standard form button.
 
 Styleguide 2.1.1
 */
-button {
+button, .button {
   padding: 5px 15px; }
-  button.primary, button.primary:hover {
+  button.primary, button.primary:hover, .button.primary, .button.primary:hover {
     color: #fff; }
-  button.smaller {
+  button.smaller, .button.smaller {
     font-size: 11px; }
-  button:hover {
+  button:hover, .button:hover {
     color: #337797; }
-  button:disabled {
+  button:disabled, .button:disabled {
     opacity: 0.5; }
 
 
@@ -28,13 +28,13 @@ A button suitable for giving stars to someone.
 
 Styleguide 2.2.1
 */
-a.button.star {
+.button.star {
   display: inline-block; }
-  a.button.star .star {
+  .button.star .star {
     font-size: 10px; }
-  a.button.star.star-given {
+  .button.star.star-given {
     color: #ae7e00; }
-  a.button.star.disabled {
+  .button.star.disabled {
     opacity: 0.5; }
 
 /*
@@ -42,7 +42,7 @@ Test that trailing period is stripped from the reference.
 
 Styleguide 2.2.2.
 */
-a.button.trailing:after {
+.button.trailing:after {
   content: '.'; }
 
 /*
@@ -52,10 +52,10 @@ A big button
 
 Styleguide Buttons.Big
 */
-a.button.big {
+.button.big {
   display: inline-block;
   font-size: 10em; }
-  a.button.big.really-big {
+  .button.big.really-big {
     font-size: 20em; }
 
 /*
@@ -63,7 +63,7 @@ A button truly lime in color
 
 Styleguide Buttons - Truly Lime
 */
-a.button.lime {
+.button.lime {
   color: lime;
 }
 
@@ -72,6 +72,6 @@ A button truly lime in color
 
 Seen in styleguide 10.2
 */
-a.button.tricksy {
+.button.tricksy {
   background: sparkles;
 }
