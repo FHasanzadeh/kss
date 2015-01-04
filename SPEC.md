@@ -4,17 +4,6 @@
 
 KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and style guide format. It is **not** a preprocessor, CSS framework, naming convention, or specificity guideline.
 
-However, there are several software projects that provide preprocessors that read and parse KSS-compliant documentation to produce full-blown style guides in HTML. Most of those implementations provide:
-
-1. a tool to generate a style guide by parsing CSS source files to find KSS docs, and
-2. a language-dependent API that represents the style guide as a data structure.
-
-This specification does not discuss those implementations.
-
-**kss-node only:** (Actually, this copy of the spec *does* discuss one of those implementations.) For example, here's how kss-node is related to kss:
-
-![KSS is a spec for docs. kss-node is a preprocessor and JavaScript API.](https://raw.githubusercontent.com/kss-node/kss/spec/kss-vs-kss-node.png)
-
 ## Purpose
 
 KSS is a set of guidelines to help you produce an HTML style guide tied to CSS documentation that is nice to read in plain text, yet structured enough to be automatically extracted and processed by a machine. It is designed with CSS preprocessors (such as Sass or LESS) in mind, and flexible enough to accommodate a multitude of CSS frameworks (such as Bootstrap or Foundation).
@@ -33,24 +22,30 @@ The basic format for KSS documentation can be explained best in an example:
 
 ```css
 /*
-Star button
+Button
 
-A button suitable for giving stars to someone.
+Your standard button suitable for clicking.
 
-:hover             - Subtle hover highlight.
-.stars-given       - A highlight indicating you've already given a star.
-.stars-given:hover - Subtle hover highlight on top of stars-given styling.
-.disabled          - Dims the button to indicate it cannot be used.
+:hover    - Highlights when hovering.
+:disabled - Dims the button when disabled.
+.primary  - Indicates button is the primary action.
+.smaller  - A little bit smaller now.
 
 Styleguide 2.1.3
 */
-.star-button {
+.button {
   ...
 }
-.star-button.stars-given {
+.button.primary {
   ...
 }
-.star-button.disabled {
+.button.smaller {
+  ...
+}
+.button:hover {
+  ...
+}
+.button:disabled {
   ...
 }
 ```
@@ -58,22 +53,28 @@ Styleguide 2.1.3
 When using a preprocessor that supports the functionality, use `//` to prefix your comment sections (Sass example):
 
 ```scss
-// Star button
+// Button
 //
-// A button suitable for giving stars to someone.
+// Your standard button suitable for clicking.
 //
-// :hover             - Subtle hover highlight.
-// .stars-given       - A highlight indicating you've already given a star.
-// .stars-given:hover - Subtle hover highlight on top of stars-given styling.
-// .disabled          - Dims the button to indicate it cannot be used.
+// :hover    - Highlights when hovering.
+// :disabled - Dims the button when disabled.
+// .primary  - Indicates button is the primary action.
+// .smaller  - A little bit smaller now.
 //
 // Styleguide 2.1.3
-.star-button {
+.button {
   ...
-  &.stars-given {
+  &.primary {
     ...
   }
-  &.disabled {
+  &.smaller {
+    ...
+  }
+  &:hover {
+    ...
+  }
+  &:disabled {
     ...
   }
 }
@@ -332,6 +333,14 @@ The actual templates generating the style guide just reference the Styleguide se
 
 Overall, keep in mind that style guides should adapt to the application they are referencing and be easy to maintain and as automatic as possible.
 
+### Implementations
+
+There are several software projects that read and parse KSS-compliant documentation to produce full-blown style guides in HTML. See the [KSS project's README](https://github.com/kneath/kss#implementations) for more information.
+
+**kss-node only:** Naturally, we prefer [kss-node](https://github.com/kss-node/kss-node).
+
+![KSS is a spec for docs. kss-node is a preprocessor and JavaScript API.](https://raw.githubusercontent.com/kss-node/kss/spec/kss-vs-kss-node.png)
+
 ### Acknowledgements
 
-KSS was inspired by [TomDoc](http://tomdoc.org).
+KSS was inspired by [TomDoc](http://tomdoc.org). Without it, KSS wouldn't exist today!
