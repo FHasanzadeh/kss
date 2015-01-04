@@ -1,18 +1,18 @@
 # Knyle Style Sheets
 
-Inspired by [TomDoc](http://tomdoc.org), KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and styleguide format. It is **not** a preprocessor, CSS framework, naming convention, or specificity guideline.
+Inspired by [TomDoc](http://tomdoc.org), KSS attempts to provide a methodology for writing maintainable, documented CSS within a team. Specifically, KSS is a documentation specification and style guide format. It is **not** a preprocessor, CSS framework, naming convention, or specificity guideline.
 
 ## Purpose
 
-KSS is a set of guidelines to help you produce an HTML styleguide tied to CSS documentation that is nice to read in plain text, yet structured enough to be automatically extracted and processed by a machine. It is designed with CSS preprocessors (such as Sass or LESS) in mind, and flexible enough to accommodate a multitude of CSS frameworks (such as Bootstrap or Foundation).
+KSS is a set of guidelines to help you produce an HTML style guide tied to CSS documentation that is nice to read in plain text, yet structured enough to be automatically extracted and processed by a machine. It is designed with CSS preprocessors (such as Sass or LESS) in mind, and flexible enough to accommodate a multitude of CSS frameworks (such as Bootstrap or Foundation).
 
-KSS focuses on *how people work with CSS* — it does not define code structures, naming conventions, or methods for abstraction. It is important to understand that the styleguide format and documentation format are intrinsically tied to one another.
+KSS focuses on *how people work with CSS* — it does not define code structures, naming conventions, or methods for abstraction. It is important to understand that the style guide format and documentation format are intrinsically tied to one another.
 
 ## Style Documentation
 
-Unlike TomDoc, not every CSS rule should be documented. You should document a rule declaration when the rule can accurately describe a visual UI element in the styleguide. Each element should have one documentation block describing that particular UI element's various states.
+Unlike TomDoc, not every CSS rule should be documented. You should document a rule declaration when the rule can accurately describe a visual UI element in the style guide. Each element should have one documentation block describing that particular UI element's various states.
 
-KSS documentation is hierarchical in nature — any documentation block at any point within the styleguide hierarchy applies to the documentation blocks beneath that level. This means that documentation for 2.1 applies to documentation for 2.1.3.
+KSS documentation is hierarchical in nature — any documentation block at any point within the style guide hierarchy applies to the documentation blocks beneath that level. This means that documentation for 2.1 applies to documentation for 2.1.3.
 
 ### Format
 
@@ -74,7 +74,7 @@ When using a preprocessor that supports the functionality, use `//` to prefix yo
 }
 ```
 
-Each KSS documentation block consists of three parts: a description of what the element does or looks like, a list of modifier classes or pseudo-classes and how they modify the element, and a reference to the element's position in the styleguide.
+Each KSS documentation block consists of three parts: a description of what the element does or looks like, a list of modifier classes or pseudo-classes and how they modify the element, and a reference to the element's position in the style guide.
 
 ### The description section
 
@@ -116,13 +116,13 @@ If the UI element you are documenting has multiple states or styles depending on
 
 ### The styleguide section
 
-If the UI element you are documenting has an example in the styleguide, you should reference it using the "Styleguide [ref]" syntax.
+If the UI element you are documenting has an example in the style guide, you should reference it using the "Styleguide [ref]" syntax.
 
 ```scss
 // Styleguide 2.1.3
 ```
 
-References can be integer sections separated by periods. Each period denotes a hierarchy of the styleguide. Styleguide references can point to entire sections, a portion of the section, or a specific example.
+References can be integer sections separated by periods. Each period denotes a hierarchy of the style guide. Style guide references can point to entire sections, a portion of the section, or a specific example.
 
 References may also be period seperated word keys. Leading words denote hierarchy.
 
@@ -183,13 +183,13 @@ If you do not know the compatibility, you should state as such.
 // Compatibility untested.
 ```
 
-## Styleguide
+## Style guide
 
-In order to fully take advantage of KSS, you should create a living styleguide. A living styleguide is a *part of your application* and includes all of the CSS, Javascript, and layout the rest of your application does.
+In order to fully take advantage of KSS, you should create a living style guide. A living style guide is a *part of your application* and includes all of the CSS, Javascript, and layout the rest of your application does.
 
 ### Organization
 
-The styleguide should be organized by numbered sections. These sections can go as deep as you like. Every element should have a numbered section to refer to. For example:
+The style guide should be organized by numbered sections. These sections can go as deep as you like. Every element should have a numbered section to refer to. For example:
 
     1. Buttons
       1.1 Form Buttons
@@ -209,10 +209,10 @@ The goal here is to create an organizational structure that is flexible, but rig
 
 ### Example
 
-This styleguide is automatically generated from KSS documentation using the ruby library.
+This style guide is automatically generated from KSS documentation using the ruby library.
 
 ![](http://share.kyleneath.com/captures/Styleguide_-_GitHub_Team-20111202-160539.png)
 
-The actual templates generating the styleguide just reference the Styleguide section and example HTML. The modified states are generated automatically. Refer to the README for more information on how to generate styleguides using the KSS ruby library.
+The actual templates generating the style guide just reference the Styleguide section and example HTML. The modified states are generated automatically. Refer to the README for more information on how to generate style guides using the KSS ruby library.
 
-Overall, keep in mind that styleguides should adapt to the application they are referencing and be easy to maintain and as automatic as possible.
+Overall, keep in mind that style guides should adapt to the application they are referencing and be easy to maintain and as automatic as possible.

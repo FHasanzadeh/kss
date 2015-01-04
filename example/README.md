@@ -1,6 +1,6 @@
-# Example Styleguide
+# Example Style Guide
 
-This application is an example of a living styleguide, generated from KSS documented styles.
+This application is an example of a living style guide, generated from KSS documented styles.
 
 Run it with:
 
