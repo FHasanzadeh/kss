@@ -11,22 +11,28 @@ The methodology and ideas behind Knyle Style Sheets are contained in [SPEC.md](h
 
 ```css
 /*
-A button suitable for giving stars to someone.
+Your standard button.
 
-:hover             - Subtle hover highlight.
-.star-given        - A highlight indicating you've already given a star.
-.star-given:hover  - Subtle hover highlight on top of star-given styling.
-.disabled          - Dims the button to indicate it cannot be used.
+:hover    - Highlights when hovering.
+:disabled - Dims the button when disabled.
+.primary  - Indicates button is the primary action.
+.smaller  - A little bit smaller now.
 
 Styleguide 2.1.3
 */
-a.button.star {
+.button {
   ...
 }
-a.button.star.star-given {
+.button.primary {
   ...
 }
-a.button.star.disabled {
+.button.smaller {
+  ...
+}
+.button:hover {
+  ...
+}
+.button:disabled {
   ...
 }
 ```

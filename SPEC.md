@@ -20,22 +20,28 @@ The basic format for KSS documentation can be explained best in an example:
 
 ```css
 /*
-A button suitable for giving stars to someone.
+Your standard button.
 
-:hover             - Subtle hover highlight.
-.star-given        - A highlight indicating you've already given a star.
-.star-given:hover  - Subtle hover highlight on top of star-given styling.
-.disabled          - Dims the button to indicate it cannot be used.
+:hover    - Highlights when hovering.
+:disabled - Dims the button when disabled.
+.primary  - Indicates button is the primary action.
+.smaller  - A little bit smaller now.
 
 Styleguide 2.1.3
 */
-.button.star {
+.button {
   ...
 }
-a.button.star.star-given {
+.button.primary {
   ...
 }
-a.button.star.disabled {
+.button.smaller {
+  ...
+}
+.button:hover {
+  ...
+}
+.button:disabled {
   ...
 }
 ```
@@ -43,20 +49,26 @@ a.button.star.disabled {
 When using a preprocessor that supports the functionality, use `//` to prefix your comment sections (Sass example):
 
 ```scss
-// A button suitable for giving stars to someone.
+// Your standard button.
 //
-// :hover             - Subtle hover highlight.
-// .star-given        - A highlight indicating you've already given a star.
-// .star-given:hover  - Subtle hover highlight on top of star-given styling.
-// .disabled          - Dims the button to indicate it cannot be used.
+// :hover    - Highlights when hovering.
+// :disabled - Dims the button when disabled.
+// .primary  - Indicates button is the primary action.
+// .smaller  - A little bit smaller now.
 //
 // Styleguide 2.1.3
-a.button.star {
+.button {
   ...
-  &.star-given {
+  &.primary {
     ...
   }
-  &.disabled {
+  &.smaller {
+    ...
+  }
+  &:hover {
+    ...
+  }
+  &:disabled {
     ...
   }
 }
@@ -95,10 +107,11 @@ To describe the status of a set of rules, you should prefix the description with
 If the UI element you are documenting has multiple states or styles depending on added classes or pseudo-classes, you should document them in the modifiers section.
 
 ```scss
-// :hover             - Subtle hover highlight.
-// .star-given        - A highlight indicating you've already given a star.
-// .star-given:hover  - Subtle hover highlight on top of star-given styling.
-// .disabled          - Dims the button to indicate it cannot be used.
+// :hover         - Highlights when hovering.
+// :disabled      - Dims the button when disabled.
+// .primary       - Indicates button is the primary action.
+// .primary:hover - Subtle hover highlight on top of primary styling.
+// .smaller       - A little bit smaller now.
 ```
 
 ### The styleguide section
