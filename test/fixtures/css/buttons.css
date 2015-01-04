@@ -38,6 +38,14 @@ a.button.star {
     opacity: 0.5; }
 
 /*
+Test that trailing period is stripped from the reference.
+
+Styleguide 2.2.2.
+*/
+a.button.trailing:after {
+  content: '.'; }
+
+/*
 A big button
 
 .really-big - Even bigger button

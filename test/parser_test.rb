@@ -50,6 +50,11 @@ class ParserTest < Kss::Test
       @css_parsed.section('2.1.1').description
   end
 
+  test "parses KSS keys that have a trailing period" do
+    assert_equal 'Test that trailing period is stripped from the reference.',
+      @css_parsed.section('2.2.2').description
+  end
+
   test "parses KSS keys that are words in CSS" do
     assert_equal 'A big button',
       @css_parsed.section('Buttons.Big').description
@@ -76,7 +81,7 @@ class ParserTest < Kss::Test
   end
 
   test "public sections returns hash of sections" do
-    assert_equal 5, @css_parsed.sections.count
+    assert_equal 6, @css_parsed.sections.count
   end
 
   test "parse multiple paths" do
