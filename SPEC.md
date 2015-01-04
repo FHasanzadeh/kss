@@ -204,6 +204,10 @@ The actual templates generating the style guide just reference the Styleguide se
 
 Overall, keep in mind that style guides should adapt to the application they are referencing and be easy to maintain and as automatic as possible.
 
+## Implementations
+
+There are several software projects that read and parse KSS-compliant documentation to produce full-blown style guides in HTML. See the [KSS project's README](https://github.com/kneath/kss#implementations) for more information.
+
 ### Acknowledgements
 
 KSS was inspired by [TomDoc](http://tomdoc.org). Without it, KSS wouldn't exist today!
