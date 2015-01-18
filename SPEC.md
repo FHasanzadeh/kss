@@ -261,10 +261,10 @@ If you use a CSS preprocessor like Sass or LESS, you should document all helper 
 //
 // Creates a linear gradient background, from top to bottom.
 //
+// Compatible in IE6+, Firefox 2+, Safari 4+.
+//
 // $start - The color hex at the top.
 // $end   - The color hex at the bottom.
-//
-// Compatible in IE6+, Firefox 2+, Safari 4+.
 //
 // Styleguide sass.mixins.gradient
 @mixin gradient($start, $end) {
