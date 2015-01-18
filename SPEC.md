@@ -89,7 +89,7 @@ Each KSS documentation block consists of two required parts and a few optional p
 5. a reference to the style's position in the style guide *(required)*
 6. **kss-node only:** a numerical weight that can be used to re-position a style outside of the normal alphabetical order *(optional)*
 
-### The heading and description sections
+### The heading and description
 
 The description should be plain sentences of what the CSS rule or hierarchy does or looks like. A good description gives guidance toward the application of elements the CSS rules style. The first paragraph in the description will be used as the heading for that style guide section.
 
@@ -122,9 +122,9 @@ To describe the status of a set of rules, you should prefix the description with
 // July 13, 2007.
 ```
 
-### The modifiers section
+### The modifiers
 
-If the UI element you are documenting has multiple states or styles depending on added classes or pseudo-classes, you should document them in the modifiers section.
+If the UI element you are documenting has multiple states or styles depending on added classes or pseudo-classes, you should document them using modifiers.
 
 ```scss
 // :hover             - Subtle hover highlight.
@@ -133,7 +133,7 @@ If the UI element you are documenting has multiple states or styles depending on
 // .disabled          - Dims the button to indicate it cannot be used.
 ```
 
-### The markup section
+### The markup
 
 **kss-node only:**
 
@@ -152,7 +152,7 @@ You can include sample markup in your style guide entries. This is not only help
 // Styleguide 1.1
 ```
 
-If you include `{{modifier_class}}` in the markup, the generated style guide will be able to use the correct CSS class when it displays the sample for each of the modifiers listed in the modifier section.
+If you include `{{modifier_class}}` in the markup, the generated style guide will be able to use the correct CSS class when it displays the sample for each of the modifiers.
 
 Instead of using inline HTML markup, you could point at a separate file that contains your HTML. kss-node supports either a plain *.html file or a Handlebars *.hbs file. The kss-node generator will search for the markup file in any of the `--source` folders.
 
@@ -166,7 +166,7 @@ Instead of using inline HTML markup, you could point at a separate file that con
 
 Lastly, if your application or component library is built with Node.js, instead of using the `markup` section, you could use the JavaScript API provided to parse the KSS documentation and build a style guide using the HTML templating library of your choice.
 
-### The styleguide section
+### The styleguide reference
 
 If the UI element you are documenting has an example in the style guide, you should reference it using the "Styleguide [ref]" syntax.
 
@@ -179,7 +179,7 @@ References can be integer sections separated by periods. Each period denotes a h
 References may also be period seperated word keys. Leading words denote hierarchy.
 
 ```scss
-// Styleguide Forms.Checkboxes.
+// Styleguide Forms.Checkboxes
 ```
 
 Finally, references may be more readable word phrases.
@@ -196,7 +196,13 @@ If there is no example, then you must note that there is no reference.
 
 **kss-node only:** If word keys or word phrases are used, kss-node will automatically generate a hierarchal number for each section since "section 4.1.3" is easier to communicate to others than "section forms - widgets - special checkboxes".
 
-### The weight section
+**kss-node only:** If the webified `Styleguide` spelling annoys you, you can use `Style guide` instead:
+
+```scss
+// Style guide: Forms.Checkboxes
+```
+
+### The weight property
 
 **kss-node only:**
 
@@ -268,7 +274,7 @@ If you use a CSS preprocessor like Sass or LESS, you should document all helper 
 
 Each documentation block should have a description section, parameters section, and compatibility section. The description section follows the same guidelines as style documentation.
 
-### The parameters section
+### The parameters
 
 If the mixin takes parameters, you should document each parameter and describe what sort of input it expects (hex, number, etc).
 
@@ -277,7 +283,7 @@ If the mixin takes parameters, you should document each parameter and describe w
 // $end   - The color hex at the bottom.
 ```
 
-### The compatibility section
+### The compatibility property
 
 You must list out what browsers this helper method is compatible in.
 
