@@ -145,7 +145,7 @@ You can include sample markup in your style guide entries. This is not only help
 // Buttons can and should be clicked.
 //
 // Markup:
-// <button class="button {{modifier_class}}">
+// <button class="button {{modifier_class}}">Button</button>
 //
 // :hover - Highlight the button when hovered.
 //
