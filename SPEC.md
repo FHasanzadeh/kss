@@ -202,6 +202,32 @@ If there is no example, then you must note that there is no reference.
 // Style guide: Forms.Checkboxes
 ```
 
+### Colors
+
+**kss-node only:**
+
+In a styleguide, a palette of colors is important. Just start a paragraph in your section with `Colors:` and describe one color by line like so:
+
+```scss
+// Colors
+//
+// Buttons can and should be clicked.
+//
+// Colors:
+// ColorName: #fad - color description
+// $name-can-be-variable: white - description and name are optional
+// #000
+//
+// Styleguide 1.1
+```
+
+- `:` to separe color name and color code.
+- `-` to separe code from description
+
+The color code is the only one requirement, name and description are optional
+
+If a line do not respect this format, it will be ignored.
+
 ### The weight property
 
 **kss-node only:**
